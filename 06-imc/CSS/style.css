@@ -1,0 +1,15 @@
+body {
+  background-color: aquamarine;
+}
+
+#paragrafo-dados {
+  margin-top: 40px;
+}
+
+input {
+  width: 100px;
+}
+
+#button-calcular-imc {
+  margin-top: 20px;
+}
