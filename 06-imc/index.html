@@ -14,17 +14,19 @@
     <main>
       <p>
         <label for="input-weight">Informe o seu peso (kg): </label>
-        <input id="input-weight" type="text" />
+        <input id="input-weight" type="number" />
       </p>
       <p>
         <label for="input-height">Informe a sua altura (m): </label>
-        <input id="input-height" type="text" />
+        <input id="input-height" type="number" />
       </p>
       <p>
         <button id="button-calcular-imc">Calcular IMC</button>
       </p>
 
-      <p id="paragrafo-dados">O IMC desses de dados é <strong>23,82</strong></p>
+      <p id="paragrafo-dados">
+        O IMC desses de dados é <strong id="imc-result"></strong>
+      </p>
     </main>
     <script defer src="./JS/script.js"></script>
   </body>
