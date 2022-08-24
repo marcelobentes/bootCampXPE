@@ -17,13 +17,25 @@ function buttonClick() {
   var weight = Number(inputWeight.value);
   var height = Number(inputHeight.value);
   let imc = calcularImc(weight, height);
-  var formatedImc = imc.toFixed(2).replace('.', ',');
+  var formatedImc = imc.toFixed(2);
   imcResult.textContent = formatedImc;
 
-  if (formatedImc > 16.0 && formatedImc < 17.0) {
-    faixaPesoResult.textContent = 'Muito abaixo do peso.';
+  if (formatedImc >= 16.0 && formatedImc < 17.0) {
+    return (faixaPesoResult.textContent = 'Muito abaixo do peso.');
+  } else if (formatedImc >= 17.0 && formatedImc <= 18.4) {
+    return (faixaPesoResult.textContent = 'Abaixo do peso.');
+  } else if (formatedImc >= 18.5 && formatedImc < 25.0) {
+    return (faixaPesoResult.textContent = 'Peso Normal.');
+  } else if (formatedImc >= 25.0 && formatedImc < 30.0) {
+    return (faixaPesoResult.textContent = 'Acima do peso.');
+  } else if (formatedImc >= 30.0 && formatedImc < 35.0) {
+    return (faixaPesoResult.textContent = 'Obesidade grau 1.');
+  } else if (formatedImc >= 35.0 && formatedImc <= 40.0) {
+    return (faixaPesoResult.textContent = 'Obesidade grau 2.');
+  } else if (formatedImc >= 40.0) {
+    return (faixaPesoResult.textContent = 'Obesidade grau 3.');
   } else {
-    faixaPesoResult.textContent = 'não entrou no if';
+    return (faixaPesoResult.textContent = 'Invalido');
   }
 }
 
